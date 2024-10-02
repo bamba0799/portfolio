@@ -15,7 +15,7 @@ const HomeCard: React.FC<HomeCardProps> = ({ name, number, date, icon }) => {
                 <div className=" bg-red-50 w-8 h-8 rounded-full flex justify-center items-center">
                     <Icon icon="clarity:employee-solid" className="w-4 h-4 text-red-500" />
                 </div>
-                <span className="ml-2 text-[13px] text-gray-500">Total employés</span>
+                <span className="ml-2 text-[13px] text-gray-500 text-red">Total employés</span>
             </div>
             <div className="flex flex-row justify-between items-center">
                 <span className="text-2xl">100</span>

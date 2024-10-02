@@ -12,11 +12,11 @@ const Header: React.FC<HeaderProps> = ({toggleSideBar}) => {
             <div className="px-3 py-3 lg:px-5 lg:pl-3">
               <div className="flex flex-items-center justify-between">
                 <div className="flex items-center justify-start rtl:justify-end">
-                  <button onClick={toggleSideBar} className=" inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                  <button onClick={toggleSideBar} className=" inline-flex items-center p-2 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
                     <Icon icon="vaadin:menu" className="w-4 h-4 text-black" />
                   </button>
                   <div className="flex items-center ">
-                    <img className="w-9 h-9 border  hidden md:flex md:items-center rounded-full" src={esphereLogo} alt="" />
+                    <img className="w-9 h-9 border  hidden lg:flex lg:items-center rounded-full" src={esphereLogo} alt="" />
                     <h1 className="text-blue-500 font-seld text-xl ml-2">E-sphere</h1>
                 </div>
                 </div>
