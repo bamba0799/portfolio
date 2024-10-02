@@ -46,8 +46,8 @@ const SideBar: React.FC<SideBarProps> = ({ isSidebarOpen }) => {
                         <a
                             key={index}
                             href={item.link}
-                            className={`flex items-center rounded-md pl-2 py-2 text-gray-700 hover:bg-blue-[20px] hover:text-blue-600 mt-2 ${
-                                activeTab === item.name ? "bg-green-500 text-white" : ""
+                            className={`flex items-center rounded-md pl-2 py-2 text-gray-700 hover:bg-blue-[20px] mt-2 ${
+                                activeTab === item.name ? " bg-paytou_orange text-white" : ""
                             }`}
                             onClick={() => setActiveTab(item.name)} // Update the active tab on click
                         >

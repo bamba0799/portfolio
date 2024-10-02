@@ -1,6 +1,5 @@
 import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+
 import './App.css'
 
 import Header from './ components/Header/Header'
@@ -12,12 +11,10 @@ import Home from './Pages/Home'
 
 const router = createBrowserRouter([
   {
-
     path: '/',
     element: <Home/>
   },
   {
-
     path: '/wait-list',
     element: <div className='mt-72'>wait list</div>
   }
@@ -36,10 +33,16 @@ function App() {
   }
   
   return (
-  <div className=''>
+  <div>
+   {isSidebarOpen?
+    <button onClick={()=>toggleSideBar()} className='absolute bg-slate-950/[0.2] w-full h-full'>
+    
+    </button>
+    :null
+    }
     <Header toggleSideBar={toggleSideBar}/>
     <SideBar isSidebarOpen={isSidebarOpen}/>
-    <Main>
+    <Main className=''>
       <RouterProvider router={router}/>
     </Main>
   </div>

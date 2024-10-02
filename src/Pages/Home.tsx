@@ -15,7 +15,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className="mt-[50px] flex flex-col gap-y-4 pt-7 pb-10 md:grid md:grid-cols-4 md:gap-x-3 md:ml-[190px] border">
+    <div className="mt-[50px] flex flex-col gap-y-4 pt-7 pb-10 md:grid md:grid-cols-4 md:gap-x-3 lg:ml-[190px] ">
       <HomeCard name="Home" number={1} date="2022-01-01" icon="home" />
       <HomeCard name="Home" number={1} date="2022-01-01" icon="home" />
       <HomeCard name="Home" number={1} date="2022-01-01" icon="home" />

@@ -20,8 +20,9 @@ const Header: React.FC<HeaderProps> = ({toggleSideBar}) => {
                     <h1 className="text-blue-500 font-seld text-xl ml-2">E-sphere</h1>
                 </div>
                 </div>
-                <button>
-                  <span>Profile</span>
+                <button className="relative  rounded-full h-[30px] w-[30px] flex flex-row justify-center items-center">
+                  <div className="h-[6px] absolute bottom-[5px] right-0 w-[6px] bg-paytou_green rounded-full "></div>
+                  <Icon icon="basil:user-solid" className="w-[20px] h-[20px] text-black"/>
                 </button>
               </div>
             </div>
