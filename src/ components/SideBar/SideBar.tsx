@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import React, { useEffect, useState } from "react";
-import esphereLogo from "../../assets/logo2.jpg";
+// import esphereLogo from "../../assets/logo2.jpg";
 
 interface SideBarProps {
     isSidebarOpen: boolean;
@@ -15,22 +15,18 @@ const sideBarItems = [
 
 const supportItems = [
     { name: "Aide", icon: "carbon:help-filled", link: "/help" },
-    { name: "Paramètres", icon: "ant-design:setting-filled", link: "/settings" },
+    { name: "Paramètres", icon: "ant-design:setting-filled", link: "/settings"},
 ];
 
 const SideBar: React.FC<SideBarProps> = ({ isSidebarOpen }) => {
-    // State to track the active tab based on the current path
     const [activeTab, setActiveTab] = useState<string>("");
-
     useEffect(() => {
-        // Set the active tab based on the current URL path
         const currentPath = window.location.pathname;
         const activeItem = sideBarItems.find(item => item.link === currentPath) || supportItems.find(item => item.link === currentPath);
         if (activeItem) {
             setActiveTab(activeItem.name);
         }
     }, []);
-
     return (
         <aside
             className={`fixed top-0 left-0 z-40 bg-white w-[190px] h-screen pt-20 bg-white-300 border-r lg:translate-x-0 transition-transform ${

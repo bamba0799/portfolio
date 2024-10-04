@@ -15,8 +15,12 @@ const router = createBrowserRouter([
     element: <Home/>
   },
   {
-    path: '/wait-list',
+    path: '/profile',
     element: <div className='mt-72'>wait list</div>
+  },
+  {
+    path: '/projects',
+    element: <div className='mt-72'>project</div>
   }
 ])
 
@@ -34,14 +38,8 @@ function App() {
   
   return (
   <div>
-   {isSidebarOpen?
-    <button onClick={()=>toggleSideBar()} className='absolute bg-slate-950/[0.2] w-full h-full'>
-    
-    </button>
-    :null
-    }
+
     <Header toggleSideBar={toggleSideBar}/>
-    <SideBar isSidebarOpen={isSidebarOpen}/>
     <Main className=''>
       <RouterProvider router={router}/>
     </Main>

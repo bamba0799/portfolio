@@ -2,13 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* :root {
-    --main-bg-color: blue;
-    --main-text-color: black;
+@layer components {
+  .row-center {
+    @apply  flex flex-row items-center justify-center;
   }
-  
-  body {
-    background-color: var(--main-bg-color);
-    color: var(--main-text-color);
-  } */
+  .row-center-x {
+    @apply  flex flex-row  justify-center;
+  }
+  .row-between {
+    @apply  flex flex-row items-center justify-between;
+  }
+  .col-between {
+    @apply  flex flex-col items-center justify-between;
+  }
+  .col-center {
+    @apply  flex flex-col items-center justify-center;
+  }
+  .col-center-y {
+    @apply  flex flex-col justify-center;
+  }
+
+  .projet-card-title {
+    @apply  text-[24px] font-bold text-black/15;
+  }
+  .projet-card-subtitle {
+    @apply  text-[15px] font-bold text-gray-400;
+  }
+
+  .button-text-size {
+    @apply  text-[12px] md:text-[18px] ;
+  }
+}
