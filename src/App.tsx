@@ -8,6 +8,7 @@ import Main from './ components/Main/Main'
 import Card from './ components/Card/Card'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './Pages/Home'
+import Profile from './Pages/Profile'
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/profile',
-    element: <div className='mt-72'>wait list</div>
+    element: <Profile/>
   },
   {
     path: '/projects',
@@ -37,12 +38,13 @@ function App() {
   }
   
   return (
-  <div>
-
-    <Header toggleSideBar={toggleSideBar}/>
-    <Main className=''>
-      <RouterProvider router={router}/>
-    </Main>
+  <div className='border flex flex-row justify-center'>
+    <div className='border w-full lg:w-[800px]'>
+        <Header className='w-full lg:w-[800px]' toggleSideBar={toggleSideBar} />
+        <Main>
+          <RouterProvider router={router}/>
+        </Main>
+    </div>
   </div>
   )
 }

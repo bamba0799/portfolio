@@ -9,7 +9,7 @@ export default {
           primary_gray:"#334155",  
           secondary_gray:"#475569",
           tertiary_gray:"#94a3b8",
-          secondary_background:"#e5e7eb",
+          secondary_background:"#f3f4f6",
         },
         boxShadow: {
           '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',

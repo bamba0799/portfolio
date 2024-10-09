@@ -4,6 +4,7 @@ import esphereLogo from "../../assets/logo2.jpg"; // Import or define the 'esphe
 
 interface HeaderProps {
   toggleSideBar: () => void;
+  className?: string;
 }
 type HeaderIconType = {
   icon: string,
@@ -25,7 +26,7 @@ const HeaderIcon: HeaderIconType[] = [
 
 ]
 
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC<HeaderProps> = ({className}) => {
 
   const [activeTab, setActiveTab] = useState<string>("");
 
@@ -42,7 +43,7 @@ const Header: React.FC<HeaderProps> = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-white py-[12px] px-[8px] shadow-md">
+    <nav className={`fixed top-0 z-50  bg-white py-[12px] px-[8px] shadow-md ${className}`}>
       <div className="h-full flex flex-row justify-between items-center">
         <div className="row-center gap-x-[4px] md:gap-x-[10px]">
           {HeaderIcon.map((item, index) => (
