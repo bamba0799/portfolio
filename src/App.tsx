@@ -9,6 +9,7 @@ import Card from './ components/Card/Card'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './Pages/Home'
 import Profile from './Pages/Profile'
+import Project from './Pages/Project'
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/projects',
-    element: <div className='mt-72'>project</div>
+    element: <Project/>
   }
 ])
 
@@ -38,8 +39,8 @@ function App() {
   }
   
   return (
-  <div className='border flex flex-row justify-center'>
-    <div className='border w-full lg:w-[800px]'>
+  <div className=' flex flex-row justify-center'>
+    <div className=' w-full lg:w-[800px]'>
         <Header className='w-full lg:w-[800px]' toggleSideBar={toggleSideBar} />
         <Main>
           <RouterProvider router={router}/>
